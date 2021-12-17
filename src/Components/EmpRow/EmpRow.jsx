@@ -117,7 +117,7 @@ const EmpRow = ({emp}) => {
                ? <input className={classes.inputSm} type="text" value={data.phoneNumber} onChange={(e) => setData({...data, phoneNumber: e.target.value})} />
                : emp.phoneNumber
             }</TableCell>
-            <TableCell className={classes.cellSm} align="center">{update
+            <TableCell className={classes.cellSm} align="center">{update && user.roleId === 1 
             ? <Select className={classes.select} value={data.roleId} onChange={(e) => setData({...data, roleId: e.target.value})}>
                  {roles.length > 0 && roles.map((i, index) => (
                     <MenuItem key={index} value={i.id}>{i.role1}</MenuItem>
