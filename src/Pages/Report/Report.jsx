@@ -66,7 +66,7 @@ const Report = () => {
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <h2>Employee Management</h2>
+        <h2>Report Management</h2>
         <div>
           <TextField
             size="small"
