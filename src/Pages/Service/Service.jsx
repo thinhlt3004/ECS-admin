@@ -69,7 +69,7 @@ const Service = () => {
                   <TableRow>
                     <TableCell align="center">ID</TableCell>
                     <TableCell align="center">Name</TableCell>
-                    <TableCell align="center">Descriptions</TableCell>
+                    {/* <TableCell align="center">Descriptions</TableCell> */}
                     <TableCell align="center">Price</TableCell>
                     <TableCell align="center">Service Category</TableCell>
                     <TableCell align="center">Image</TableCell>

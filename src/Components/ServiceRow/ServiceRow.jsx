@@ -33,7 +33,7 @@ const ServiceRow = ({ i }) => {
     <>
       <TableCell align="center">{i.id}</TableCell>
       <TableCell align="center">{i.name}</TableCell>
-      <TableCell align="center">{i.description}</TableCell>
+      {/* <TableCell align="center">{i.description}</TableCell> */}
       <TableCell align="center">{i.price}</TableCell>
       <TableCell align="center">{cateName}</TableCell>
       <TableCell align="center">
