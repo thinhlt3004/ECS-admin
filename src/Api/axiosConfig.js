@@ -20,10 +20,11 @@ privateRequest.interceptors.request.use(
         let currentDate = new Date(); 
         const decodedToken = jwt_decode(token.accessToken);
         if (decodedToken.exp * 1000  < currentDate.getTime()) {     
-            store.dispatch(authActions.expireLogOut.expireLogOutRequest);    
+            store.dispatch(authActions.expireLogOut.expireLogOutRequest());    
+        }else{
+            config.headers["Authorization"] = `Bearer ${JSON.parse(localStorage.getItem('adminToken')).accessToken}`;
+            return config;   
         }
-        config.headers["Authorization"] = `Bearer ${JSON.parse(localStorage.getItem('adminToken')).accessToken}`;
-        return config;   
     },
     (error) => {
       return Promise.reject(error);
